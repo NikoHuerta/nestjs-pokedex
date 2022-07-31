@@ -9,11 +9,15 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true,
       forbidNonWhitelisted: true,
+      transform: true,
+      transformOptions: {
+        enableImplicitConversion: true
+      }
     }) 
   );
 
-  await app.listen(3000, () => {
-    Logger.log('Listening on port 3000');
+  await app.listen( process.env.PORT, () => {
+    Logger.log(`Listening on port ${ process.env.PORT }`);
   });
 }
 bootstrap();

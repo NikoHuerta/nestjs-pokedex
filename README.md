@@ -8,6 +8,7 @@
 $ npm i -g @nestjs/cli
 $ docker-compose up -d
 $ yarn install
+$ GET http://localhost:3000/api/v1/seed
 ```
 
 ## Running the app
